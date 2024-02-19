@@ -1,0 +1,424 @@
+
+
+:root {
+    --textMainColor: #2a2a2e;
+    --textSecondaryColor: #5e5d66;
+    --textContrast: #fff;
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fafafa;
+    --borderBackgroundColor: #e8e8e8;
+
+    --primaryButtonColor: #9b8dd1;
+    --buttonColorHover: #8d79ce;
+    
+    --backgroundIconColor: #e7e3f1;
+    --iconColor: #afa3d5;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--textMainColor);
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, label, input, textarea, li {
+    color: var (--textSecondaryColor);
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: var (--primaryBackgroundColor);
+}
+
+@media screen and (max-width: 1200px){
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* Button */
+
+.button {
+    font-family: "Montserrat", sans-serif;
+    color: var(--textContrast);
+    padding: 0.9rem 1.2rem;
+    background: var(--primaryButtonColor);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.button:hover{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background: var(--buttonColorHover);
+}
+
+/* Title */
+
+.section-title {
+    margin: 0.2rem 0 1.7rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--textSecondaryColor);
+    position: relatives;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 0.9rem;
+    
+}
+
+.pre-title-2 {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--textSecondaryColor);
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+}
+
+.sub-title {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    gap: 1rem;
+}
+
+/* Layout */
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Navbar */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo a {
+    color: var(--textMainColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--textMainColor);
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 6px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* hero */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-right img{
+    width: 450px;
+    height: 400px;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span{
+    color: var(--iconColor);
+}
+
+/* About me: Skill */
+
+#about-me {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+}
+
+.about-me-container  {
+    text-align: center;
+}
+
+.skills-icon img {
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    margin: 10px;
+}
+
+.skills-icon:adobe-photoshop-icon svg {
+    transition-delay: 200ms;
+}
+
+.skills-icon:adobe-illustrator-icon svg {
+    transition-delay: 400ms;
+}
+
+.skills-icon.skills-icon:adobe-xd-icon svg {
+    transition-delay: 600ms;
+}
+
+.skills-icon:javascript-programming-language-icon svg{
+    transition-delay: 800ms;
+}
+
+.skills-icon:figma-icon svg{
+    transition-delay: 800ms;
+}
+
+/* About me: Education */
+
+.education-table{
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9rem;
+    min-width: 560px;
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    box-shadow:  rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    align-content: center;
+}
+
+.education-table thead tr{
+    background-color: #9b8dd1;
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.education-table th, .education-table td {
+    padding: 12px 15px;
+}
+
+.education-table tbody tr{
+    border-bottom: 1px solid var(--secondaryBackgroundColor);
+}
+
+.education-table tbody tr:last-of-type{
+    border-bottom: 2px solid #9b8dd1;
+}
+
+/* Portfolio */
+
+#portfolio {
+    padding: var(--sectionPadding);
+} 
+
+.portfolio-main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderBackgroundColor);
+}
+
+.portfolio-cover {
+    height: 250px;
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+  }
+  
+  .portfolio-title a svg:hover {
+    fill: var(--iconColor);
+  }
+  
+  .portfolio-title a svg {
+    transition: 0.2s ease-in-out;
+  }
+
+
+/* Contact */
+#contact {
+    margin-top: 50px;
+    padding: var(--secondaryBackgroundColor);
+}
+
+.contact {
+    height: 480px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    background: var(--secondaryBackgroundColor);
+    border: 1px solid var(--borderBackgroundColor);
+    border-radius: 6px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: var(--textSecondaryColor);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7e;
+}
+
+.btn-submit {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background-color: var(--primaryButtonColor);
+    color: var(--textContrast);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.contact-item{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-submit:hover{
+    background: var(--buttonColorHover);
+}
+
+.contact-item-icon{
+    background: var(--backgroundIconColor);
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: var(--iconColor);
+}
+
+.contact-item-icon h4{
+    margin-bottom: 0.6rem;
+}
+
+footer {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+}
+
+footer-icons {
+    margin-bottom: 20rem;
+
+}
+
+footer-icons a {
+    margin: 10 5.5rem;
+}
+
+footer-icons svg {
+    fill:#5e5d66;
+ 
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap')
+
+
+
